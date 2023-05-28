@@ -76,7 +76,9 @@ html{
   margin: -1px;
 
 }
-
+*{
+  transition: all 0.3s ease;
+}
 ul[class],
 ol[class] {
   padding: 0;
@@ -212,14 +214,20 @@ body{
     font-size: 20px;
     line-height: 24px;
     padding:8px 15px ;
-    border-radius: 100px;
   }
 }
-.header_inner a:hover{
+.header_inner a:last-child{
+  border-radius: 100px;
   color: #5A3215;
   background: #fff;
 
 }
+.header_inner a:hover{
+border-bottom: 1px solid #fff;
+}
+.header_inner a:last-child{
+  border-bottom: none;
+  }
 .header_inner_card a:hover{
   transform: scale(1.1);
 }
@@ -400,7 +408,7 @@ color: #EFEFEF;
   z-index: 3;
 }
 .intro_anim.listok1{
-  top:0 ;
+  top:-100px ;
   left: 10%;
 }
 .intro_anim.listok2{

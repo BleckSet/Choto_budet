@@ -74,6 +74,11 @@ html {
   margin: -1px;
 }
 
+* {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 ul[class],
 ol[class] {
   padding: 0;
@@ -232,12 +237,20 @@ body {
   font-size: 20px;
   line-height: 24px;
   padding: 8px 15px;
+}
+
+.header_inner a:last-child {
   border-radius: 100px;
+  color: #5A3215;
+  background: #fff;
 }
 
 .header_inner a:hover {
-  color: #5A3215;
-  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.header_inner a:last-child {
+  border-bottom: none;
 }
 
 .header_inner_card a:hover {
@@ -521,7 +534,7 @@ section {
 }
 
 .intro_anim.listok1 {
-  top: 0;
+  top: -100px;
   left: 10%;
 }
 
