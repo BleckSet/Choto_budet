@@ -271,7 +271,7 @@ section {
   right: 0;
   top: 0;
   width: 55%;
-  height: 1000px;
+  height: 1005px;
   background: #ADC330;
 }
 
@@ -627,4 +627,75 @@ section {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
+}
+
+.whyWe_inner {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 500px;
+  background: url("../img/dest/whyWe/line.svg") center 150px/contain no-repeat;
+}
+
+.whyWe_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 250px;
+  font-family: "Montserrat";
+  text-align: center;
+  color: #522424;
+}
+.whyWe_item h1 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}
+.whyWe_item p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+.whyWe_item img {
+  margin-top: 45px;
+}
+
+.whyWe_item:nth-child(2) {
+  margin-top: 80px;
+}
+.whyWe_item:nth-child(2) h1 {
+  margin-top: 20px;
+}
+.whyWe_item:nth-child(2) p {
+  margin-bottom: 0;
+}
+
+.whyWe_item:nth-child(3) {
+  margin-top: 70px;
+}
+
+.whyWe .listok1 {
+  width: 150px;
+  height: 70px;
+}
+.whyWe .listok2 {
+  width: 50px;
+  height: 20px;
+}
+.whyWe .listok3 {
+  width: 300px;
+  height: 140px;
+  right: -100px;
 }

@@ -243,7 +243,7 @@ section{
   right: 0;
   top: 0;
 width: 55%;
-  height: 1000px;
+  height: 1005px;
   background:#ADC330 ;
 }
 .intro_right_inner{
@@ -492,4 +492,67 @@ transform: scale(1.1);
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+.whyWe_inner{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 500px;
+  background: url('../img/dest/whyWe/line.svg') center 150px/contain no-repeat;
+}
+.whyWe_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  font-family: 'Montserrat';
+  text-align: center;
+  color: #522424;
+  h1{
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+
+  }
+  p{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  img{
+    margin-top: 45px;
+  }
+  
+}
+.whyWe_item{
+
+}
+.whyWe_item:nth-child(2){
+margin-top:80px ;
+h1{
+  margin-top: 20px;
+}
+p{
+  margin-bottom: 0;
+}
+
+}
+.whyWe_item:nth-child(3){
+  margin-top:70px ;
+}
+.whyWe{
+  .listok1{
+width: 150px;
+height: 70px;
+  } 
+  .listok2{
+    width: 50px;
+    height: 20px;
+  }
+  .listok3{
+width: 300px;
+height: 140px;
+right: -100px;
+  }
 }
