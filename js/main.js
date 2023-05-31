@@ -1,21 +1,21 @@
 // Получаем все элементы с классом "anim"
-var elements = document.getElementsByClassName('anim');
+let elements = document.getElementsByClassName('anim');
 
 // Задаем CSS-свойство transition для плавного перехода
-for (var i = 0; i < elements.length; i++) {
-  var element = elements[i];
+for (let i = 0; i < elements.length; i++) {
+  let element = elements[i];
   element.style.transition = 'transform 2s ease-in-out';
 }
 
 // Запускаем функцию для обновления позиций элементов каждую секунду
 setInterval(function() {
-  for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+  for (let i = 0; i < elements.length; i++) {
+    let element = elements[i];
 
     // Добавляем случайное смещение по оси X и Y
     element.style.transform = 'translate(' + getRandomOffset() + 'px, ' + getRandomOffset() + 'px)';
   }
-}, 1500);
+}, 2000);
 
 // Функция для генерации случайного смещения в диапазоне от -40 до 40
 function getRandomOffset() {
@@ -80,4 +80,29 @@ $('.recomen_slider').slick({
     
   ]
  
+});
+
+$(document).ready(function() {
+  var sidebar = $('.sidebar_intro');
+  var submenu = $('.submenu_intro');
+  var menuButton = $('.menu-button_intro');
+
+  menuButton.click(function() {
+    var buttonId = $(this).attr('id');
+    var menuId = buttonId.split('-')[0] + '-menu';
+
+    sidebar.addClass('opened');
+    submenu.removeClass('active');
+    $('#' + menuId).toggleClass('active');
+    menuButton.removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest('.sidebar_intro, .menu-button_intro').length) {
+      sidebar.removeClass('opened');
+      submenu.removeClass('active');
+      menuButton.removeClass('active');
+    }
+  });
 });
