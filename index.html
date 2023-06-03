@@ -8,9 +8,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 </head>
 <body>
+    <div class="search_bar_popup" id="">
 
+        <div class="search_bar popup">
+            
+            <input class="search_input" type="text" id="search-input" placeholder="Введите название продукции">
+            <button class="search_btn" id="search-button_popup"><img src="img/icon/search_bar.png" alt=""></button>
+        </div>
+    </div>
 <div class="wrapper">
     <div class="sidebar_intro">
         <div class="sidebar_intro_btn">
@@ -25,7 +34,7 @@
                     <span>0</span>
                 </span>
             </button>
-            <button class="menu-button_intro" id="search-button">
+            <button class="menu-button_intro_serch" id="search-button">
                 <img src="img/icon/search.png" alt=""></button>
         </div>
         <div class="submenu_intro" id="shop-menu">
@@ -151,14 +160,7 @@
                 </div> -->
             </div>  
         </div>
-        <div class="submenu_intro" id="search-menu">
-            <div class="submenu_title">
-                
-                    <h3>Что ищите?</h3>
-                <img src="img/icon/arrow.png" alt="">
-            </div>   
-   
-        </div>
+     
       
   
       </div>
@@ -222,12 +224,17 @@
                         <h1>
                             САЖЕНЦЫ-ТВОИ САМЫЕ ЛУЧШИЕ 
                         </h1>
-    
-                        <div class="intro_btn btn">
-                            <a href="catalog.html" >
-                                В каталог
-                            </a>
-                        </div>
+                        <p>Продажа качественных саженцев, удобное оформление и быстрая доставка</p>
+<a href="catalog.html" class="btn">
+
+    <div class="intro_btn btn">
+        <span>
+            
+            В каталог
+            
+        </span>
+    </div>
+</a>
                     </div>   
     
             </div>
@@ -522,8 +529,9 @@
 </div>
     </footer>
   
-
     <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>

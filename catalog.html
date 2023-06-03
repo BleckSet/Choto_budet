@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 </head>
 <body>
 <header class="header">
@@ -15,7 +17,7 @@
    <div class="header_inner">
       <ul class="header_inner_ul">
         
-        <li><a href="">Каталог</a></li>
+        <li><a href="index.html">Каталог</a></li>
         <li><a href="">Преимущетсва</a></li>
         <li><a href="">Контакты</a></li>
         <li><a href="">Как купить</a></li>
@@ -31,8 +33,423 @@
       <div class="catalog_intro_bg">
           <img src="img/catalog_BG.jpg" alt="">
       </div>
-      <div class="catalog_intro title">
-        <h1 class="title">ПРОДУКЦИЯ</h1>
+      <div class="catalog_intro_inner">
+
+        <div class="catalog_intro_title">
+          <h1 class="title">ПРОДУКЦИЯ</h1>
+        </div>
+        <div class="catalog_intro_inner_catalog">
+          <div class="catalog_intro_inner_item">
+            <a href="#" >
+              <span>Саженцы</span>
+            </a>
+            <a href="#">
+              <span>Земляника</span>
+            </a>
+          </div>
+          <div class="catalog_intro_inner_item">
+            <a href="#" >
+              <span>Саженцы</span>
+            </a>
+            <a href="#">
+              <span>Земляника</span>
+            </a>
+          </div>
+        </div>
+        <a href="catalog.html">
+
+          <div class="catalog_btn btn">
+            <span>
+              
+              Смотреть каталог
+              
+            </span>
+            <img src="img/icon/arrow.png" alt="">
+            
+          </div>
+      </a>
+      </div> 
+    </section>
+    <section class="shop">
+      <div class="container">
+        <div class="shop_inner">
+          <div class="shop_filter">
+            <div class="shop_filter_title">
+              <img src="img/icon/filter.png" alt="">
+              <h3>фильтр</h3>
+            </div>
+            <div class="shop_accordion">
+              <div class="shop_accordion-item">
+                <div class="shop_accordion-header">Саженцы 
+                  <img src="img/icon/arrow.png" alt="">
+                </div>
+                <div class="shop_accordion-content">
+               <ul>
+                <li><a href="">Плодовые
+                  <img src="img/icon/arrow.png" alt="">
+                </a>
+              
+              <div class="dop_content">
+
+              </div>
+              </li>
+
+                <li><a href="">Декоративные
+                  <img src="img/icon/arrow.png" alt="">
+                </a></li>
+               </ul>
+                </div>
+              </div>
+              
+               <div class="shop_accordion-item">
+                <div class="shop_accordion-header">Саженцы 
+                  <img src="img/icon/arrow.png" alt="">
+                </div>
+                <div class="shop_accordion-content">
+               <ul>
+                <li><a href="">Плодовые
+                  <img src="img/icon/arrow.png" alt="">
+                </a>
+              
+              <div class="dop_content">
+                
+              </div>
+              </li>
+
+                <li><a href="">Декоративные
+                  <img src="img/icon/arrow.png" alt="">
+                </a></li>
+               </ul>
+                </div>
+              </div>
+              
+              <div class="shop_accordion-item">
+                <div class="shop_accordion-header">Саженцы 
+                  <img src="img/icon/arrow.png" alt="">
+                </div>
+                <div class="shop_accordion-content">
+               <ul>
+                <li><a href="">Плодовые
+                  <img src="img/icon/arrow.png" alt="">
+                </a>
+              
+              <div class="dop_content">
+                
+              </div>
+              </li>
+
+                <li><a href="">Декоративные
+                  <img src="img/icon/arrow.png" alt="">
+                </a></li>
+               </ul>
+                </div>
+              </div>
+              
+              <div class="shop_accordion-item">
+                <div class="shop_accordion-header">Саженцы 
+                  <img src="img/icon/arrow.png" alt="">
+                </div>
+                <div class="shop_accordion-content">
+               <ul>
+                <li><a href="">Плодовые
+                  <img src="img/icon/arrow.png" alt="">
+                </a>
+              
+              <div class="dop_content">
+                
+              </div>
+              </li>
+
+                <li><a href="">Декоративные
+                  <img src="img/icon/arrow.png" alt="">
+                </a></li>
+               </ul>
+                </div>
+              </div>
+              
+          </div>
+          <div class="shop_price_slider">
+              <div class="price_slider_title">
+                <h3>Цена</h3>
+              </div>
+            <div id="price-slider"></div>
+            <input type="text" id="min-price" readonly>
+            <input type="text" id="max-price" readonly>
+            
+          </div>
+        </div>
+          <div class="shop_content">
+
+            <div class="search_bar">
+              
+              <input class="search_input" type="text" id="search-input" placeholder="Введите название продукции">
+              <button class="search_btn" id="search-button"><img src="img/icon/search_bar.png" alt=""></button>
+            </div>
+                <div class="shop_content_catalog">
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                    <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                  <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div> <div class="catalog_item">
+                      <a class="catalog_item_img_link" href="card_single.html">
+                     
+                    <div class="catalog_item_img">
+                      <img src="img/icon/zaglushka.jpg" alt="">
+                      <span>подробнее...</span>
+                      
+                    </div>
+                    
+                    </a>
+                    <div class="catalog_item_title">
+                        <h1>Вишня Шоколадница</h1>
+                    </div>
+                    <div class="catalog_item_price">
+                      <h3 class="price">
+                        400 р/
+                      </h3>
+                      <h4 class="colvo">
+                        1 Саженец
+                      </h4>
+                    </div>
+                    <a href="oformlenie.html"><button class="catalog_item_btn_corzina btn">
+                        В корзину
+                    </button>
+</a>                    <button class="catalog_item_btn_izbranoe">
+                      <img src="img/icon/heart.png" alt="">
+                    </button>
+                  </div>
+                </div>
+
+
+                <div class="catalog_page_num">
+                  <div class="page_num_item onPage">1</div>
+                  <div class="page_num_item">2</div>
+                  <div class="page_num_item">...</div>
+                  <div class="page_num_item">5</div> 
+                </div>
+
+
+          </div>
+        </div>
       </div>
     </section>
 </div>
@@ -40,6 +457,7 @@
   
 
     <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>

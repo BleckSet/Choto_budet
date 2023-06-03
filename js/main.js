@@ -27,21 +27,23 @@ function getRandomOffset() {
 
   
 $('.product_slider').slick({
-  slidesToShow: 2,
+  slidesToShow: 3,
   centerMode: true,
-  centerPadding: '20px',
+  variableWidth: true,
   slidesToScroll: 1,
   dots: false,
   arrow:true,
   infinite: true,
-  variableWidth:true,
    responsive: [
+    
     {
-      breakpoint: 768,
+      breakpoint: 1178,
       settings: {
-        slidesToShow: 1,
+        centerPadding: false,
+        slidesToShow:1,
         slidesToScroll: 1,
-        centerMode: false,
+        centerMode: true,
+        variableWidth: false,
       }
     },
     {
@@ -49,7 +51,6 @@ $('.product_slider').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: false
       }
     }
     
@@ -69,13 +70,23 @@ $('.recomen_slider').slick({
   autoplaySpeed: 2000,
    responsive: [
     {
-      breakpoint: 768,
+      breakpoint:1480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: false,
+      }
+    },
+    {
+      breakpoint:1178,
+      settings: {
+        slidesToShow: 3,
+        centerMode:true,
         slidesToScroll: 1,
         centerMode: false,
       }
     }
+   
    
     
   ]
@@ -104,5 +115,113 @@ $(document).ready(function() {
       submenu.removeClass('active');
       menuButton.removeClass('active');
     }
+  });
+});
+
+
+// Получаем все элементы аккордеона
+const accordionItems = document.querySelectorAll('.shop_accordion-item');
+
+// Добавляем обработчик событий на клик по заголовку аккордеона
+accordionItems.forEach(item => {
+  const header = item.querySelector('.shop_accordion-header');
+  const content = item.querySelector('.shop_accordion-content');
+  
+  // Обработчик события клика по заголовку
+  header.addEventListener('click', () => {
+    // Добавляем/удаляем класс active для заголовка и элемента
+    header.classList.toggle('active');
+    item.classList.toggle('active');
+    
+    // Если элемент открыт, то устанавливаем максимальную высоту для контента
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = 0;
+    }
+  });
+});
+
+
+$(function() {
+  // Получите элементы ползунка и текстовых полей
+  var priceSlider = $("#price-slider");
+  var minPriceField = $("#min-price");
+  var maxPriceField = $("#max-price");
+  
+  // Установите начальные значения цен
+  var minPrice = 100;
+  var maxPrice = 1000;
+  minPriceField.val(minPrice);
+  maxPriceField.val(maxPrice);
+  
+  // Инициализируйте ползунок с ценой
+  priceSlider.slider({
+    range: true,
+    min: 0,
+    max: 1000,
+    values: [minPrice, maxPrice],
+    slide: function(event, ui) {
+      // Обновите значения текстовых полей при изменении положения ползунка
+      minPriceField.val(ui.values[0]);
+      maxPriceField.val(ui.values[1]);
+    }
+  });
+});
+
+
+
+$(document).ready(function() {
+  // Плавная прокрутка до якоря при клике на кнопку
+  $('a').click(function() {
+    var target = $(this.hash);
+    $('html, body').animate({
+      scrollTop: target.offset().top + -50
+    }, 800);
+    return false;
+  });
+});
+
+jQuery(function($) {
+  // Функция для обновления итоговой суммы
+  function updateTotalPrice() {
+    var quantity = parseInt($('.quantity-input').val());
+    var price = parseFloat($('.product-price').text()); // Здесь '.product-price' - селектор элемента с ценой товара
+    var totalPrice = quantity * price;
+    $('.total-amount').text(totalPrice.toFixed(2)); // Здесь '.total-amount' - селектор элемента для вывода итоговой суммы
+  }
+
+  // Обработчик события клика на кнопку минус
+  $('.quantity-block .minus').click(function(e) {
+    e.preventDefault();
+    var $input = $(this).closest('.quantity-block').find('.quantity-input');
+    var value = parseInt($input.val());
+    if (value > 1) {
+      $input.val(value - 1);
+      updateTotalPrice(); // Обновляем итоговую сумму при изменении количества
+    }
+  });
+
+  // Обработчик события клика на кнопку плюс
+  $('.quantity-block .plus').click(function(e) {
+    e.preventDefault();
+    var $input = $(this).closest('.quantity-block').find('.quantity-input');
+    var value = parseInt($input.val());
+    $input.val(value + 1);
+    updateTotalPrice(); // Обновляем итоговую сумму при изменении количества
+  });
+
+  // Обработчик события изменения значения ввода количества
+  $('.quantity-block .quantity-input').change(function() {
+    updateTotalPrice(); // Обновляем итоговую сумму при изменении количества
+  });
+
+  // Инициализация итоговой суммы при загрузке страницы
+  updateTotalPrice();
+});
+
+$(document).ready(function() {
+  $("#search-button").click(function() {
+    $(".search_bar_popup").toggleClass("active");
   });
 });
