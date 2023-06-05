@@ -59,18 +59,23 @@ $('.product_slider').slick({
   nextArrow: $('.custom_btn_slider_right')
   
 });
-
 $('.recomen_slider').slick({
   slidesToShow: 5.5,
   slidesToScroll: 1,
   dots: false,
-  arrow:false,
+  arrow: false,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 2000,
-   responsive: [
+  autoplay: true, 
+  autoplaySpeed: 0,
+   speed: 10000,
+  cssEase: 'linear',
+  pauseOnHover: true,
+  pauseOnFocus: false,
+  waitForAnimate: false,
+  responsive: [
     {
-      breakpoint:1480,
+      breakpoint: 1480,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -78,19 +83,31 @@ $('.recomen_slider').slick({
       }
     },
     {
-      breakpoint:1178,
+      breakpoint: 1178,
       settings: {
         slidesToShow: 3,
-        centerMode:true,
+        centerMode: true,
+        slidesToScroll: 1,
+        centerMode: false,
+      }
+    },
+    {
+      breakpoint: 378,
+      settings: {
+        slidesToShow: 2,
+        centerMode: true,
         slidesToScroll: 1,
         centerMode: false,
       }
     }
-   
-   
-    
   ]
- 
+});
+$('.recomen_slider').on('mouseenter', function() {
+  $(this).slick('slickPause');
+});
+
+$('.recomen_slider').on('mouseleave', function() {
+  $(this).slick('slickPlay');
 });
 
 $(document).ready(function() {
@@ -223,5 +240,28 @@ jQuery(function($) {
 $(document).ready(function() {
   $("#search-button").click(function() {
     $(".search_bar_popup").toggleClass("active");
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  let burger = document.querySelector('.burger');
+  let menu = document.querySelector('header');
+  let body = document.body;
+  
+  burger.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let filter = document.querySelector('.shop_filter_title img');
+  let filterMenu = document.querySelector('.shop_accordion');
+  let priceSlider = document.querySelector('.shop_price_slider');
+  
+  filter.addEventListener('click', function() {
+    filterMenu.classList.toggle('active');
+    priceSlider.classList.toggle('active');
   });
 });
